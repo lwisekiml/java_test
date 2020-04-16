@@ -1,4 +1,4 @@
-﻿package echo;
+package echo;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
