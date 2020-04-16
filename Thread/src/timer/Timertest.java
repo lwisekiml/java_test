@@ -1,4 +1,4 @@
-﻿package timer;
+package timer;
 import java.util.Timer;
 
 public class Timertest {
@@ -15,4 +15,4 @@ public class Timertest {
 		System.out.println("timer cancel");
 //		timer.cancel(); // 없으면 Thread 종료 안됨
 	}
-}
+}
