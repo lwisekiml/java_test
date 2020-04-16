@@ -1,4 +1,4 @@
-package test;
+ï»¿package test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,19 +14,19 @@ public class JavaCompareTest {
 		// TODO Auto-generated method stub
 		List<User> users = getCreateUsers();
  
-		System.out.println("===== Á¤·Ä ÇÏ±âÀü =====");
+		System.out.println("===== ì •ë ¬ í•˜ê¸°ì „ =====");
 		for (User temp : users) {
 			System.out.println(temp);
 		}
  
 		Collections.sort(users, new NameAscCompare());
-		System.out.printf("\n\n===== ¿À¸§ Â÷¼ø Á¤·Ä =====\n");
+		System.out.printf("\n\n===== ì˜¤ë¦„ ì°¨ìˆœ ì •ë ¬ =====\n");
 		for (User temp : users) {
 			System.out.println(temp);
 		}
  
 		Collections.sort(users, new NameDescCompare());
-		System.out.printf("\n\n===== ³»¸² Â÷¼ø Á¤·Ä =====\n");
+		System.out.printf("\n\n===== ë‚´ë¦¼ ì°¨ìˆœ ì •ë ¬ =====\n");
 		for (User temp : users) {
 			System.out.println(temp);
 		}
@@ -42,29 +42,29 @@ public class JavaCompareTest {
 		 List<User> users = new ArrayList<User>();
  
 		 User user = new User();
-		 user.setName("°íÃ¶¼ö");
-		 user.setAddress("°æ±âµµ ¼º³²½Ã ºĞ´ç±¸");
+		 user.setName("ê³ ì² ìˆ˜");
+		 user.setAddress("ê²½ê¸°ë„ ì„±ë‚¨ì‹œ ë¶„ë‹¹êµ¬");
 		 user.setPhone("010-1234-0192");
 		 users.add(user);
  
  
 		 user = new User();
-		 user.setName("¹Ú¿µÈñ");
-		 user.setAddress("ºÎ»ê ÇØ¿î´ë");
+		 user.setName("ë°•ì˜í¬");
+		 user.setAddress("ë¶€ì‚° í•´ìš´ëŒ€");
 		 user.setPhone("010-4234-0192");
 		 users.add(user);
  
  
 		 user = new User();
-		 user.setName("°¨¼ö¿Õ");
-		 user.setAddress("ÃæºÏ Á¦Ãµ");
+		 user.setName("ê°ìˆ˜ì™•");
+		 user.setAddress("ì¶©ë¶ ì œì²œ");
 		 user.setPhone("010-7234-0192");
 		 users.add(user);
  
  
 		 user = new User();
-		 user.setName("ÀÌ»ç¶÷");
-		 user.setAddress("°­¿øµµ ¿µ¿ï");
+		 user.setName("ì´ì‚¬ëŒ");
+		 user.setAddress("ê°•ì›ë„ ì˜ìš¸");
 		 user.setPhone("010-0234-0192");
 		 users.add(user);
 		return users;
@@ -72,14 +72,14 @@ public class JavaCompareTest {
  
  
 	 /**
-	  * ÀÌ¸§ ¿À¸§Â÷¼ø
+	  * ì´ë¦„ ì˜¤ë¦„ì°¨ìˆœ
 	  * @author falbb
 	  *
 	  */
 	static class NameAscCompare implements Comparator<User> {
  
 		/**
-		 * ¿À¸§Â÷¼ø(ASC)
+		 * ì˜¤ë¦„ì°¨ìˆœ(ASC)
 		 */
 		@Override
 		public int compare(User arg0, User arg1) {
@@ -90,14 +90,14 @@ public class JavaCompareTest {
 	}
  
 	/**
-	 * ÀÌ¸§ ³»¸²Â÷¼ø
+	 * ì´ë¦„ ë‚´ë¦¼ì°¨ìˆœ
 	 * @author falbb
 	 *
 	 */
 	static class NameDescCompare implements Comparator<User> {
  
 		/**
-		 * ³»¸²Â÷¼ø(DESC)
+		 * ë‚´ë¦¼ì°¨ìˆœ(DESC)
 		 */
 		@Override
 		public int compare(User arg0, User arg1) {

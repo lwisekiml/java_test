@@ -2,7 +2,7 @@ package interruptEnd;
 
 public class Thread5 {
 	public static void main(String[] args) {
-		ThreadInterrupt ti = new ThreadInterrupt("¾²·¹µå");
+		ThreadInterrupt ti = new ThreadInterrupt("ì“°ë ˆë“œ");
 
 		ti.start();
 

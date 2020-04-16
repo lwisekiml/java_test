@@ -1,11 +1,11 @@
 package priority;
-// ¿ì¼± ¼øÀ§°¡ ³ô´Ù°í ²À ¸ÕÀú ½ÇÇàµÇ´Â°Ç ¾Æ´Ñµí ÇÏ´Ù.
-// È®ÀÎ ÇÊ¿ä!!!
+// ìš°ì„  ìˆœìœ„ê°€ ë†’ë‹¤ê³  ê¼­ ë¨¼ì € ì‹¤í–‰ë˜ëŠ”ê±´ ì•„ë‹Œë“¯ í•˜ë‹¤.
+// í™•ì¸ í•„ìš”!!!
 public class Thread4 {
 	public static void main(String args[]) {
-		PriorityTest t1 = new PriorityTest("¿ì¼± ¼øÀ§°¡ ³·Àº ¾²·¹µå");
-		PriorityTest t2 = new PriorityTest("¿ì¼± ¼øÀ§°¡ ³ôÀº ¾²·¹µå");
-		PriorityTest t3 = new PriorityTest("¿ì¼± ¼øÀ§°¡ ³ôÀº ¾²·¹µå");
+		PriorityTest t1 = new PriorityTest("ìš°ì„  ìˆœìœ„ê°€ ë‚®ì€ ì“°ë ˆë“œ");
+		PriorityTest t2 = new PriorityTest("ìš°ì„  ìˆœìœ„ê°€ ë†’ì€ ì“°ë ˆë“œ");
+		PriorityTest t3 = new PriorityTest("ìš°ì„  ìˆœìœ„ê°€ ë†’ì€ ì“°ë ˆë“œ");
 		
 		t1.setPriority(Thread.MIN_PRIORITY);
 		t2.setPriority(Thread.MAX_PRIORITY);

@@ -14,20 +14,20 @@ public class MainClass {
 			executorService.execute(dothread);
 		}
 		
-//		ExecutorServiceÀÇ ¸ğµç ÀÛ¾÷ ÀÌÈÄ ´Ù¸¥ thread È£ÃâÀ» 10ÃÊ µ¿¾È Â÷´Ü
+//		ExecutorServiceì˜ ëª¨ë“  ì‘ì—… ì´í›„ ë‹¤ë¥¸ thread í˜¸ì¶œì„ 10ì´ˆ ë™ì•ˆ ì°¨ë‹¨
 //		executorService.awaitTermination(10, TimeUnit.SECONDS);
 		
-		/* ExecutorService Á¾·á */
-		executorService.shutdown(); // ExecutorÀÇ ÀÛ¾÷À» ±â´Ù¸®°í Á¾·á½ÃÅ²´Ù. ´Ù¸¥ ÀÛ¾÷ÀÇ Á¾·á¸¦ ±â´Ù·ÁÁÜ(¾øÀ¸¸é Á¾·á ¾ÈµÊ)
+		/* ExecutorService ì¢…ë£Œ */
+		executorService.shutdown(); // Executorì˜ ì‘ì—…ì„ ê¸°ë‹¤ë¦¬ê³  ì¢…ë£Œì‹œí‚¨ë‹¤. ë‹¤ë¥¸ ì‘ì—…ì˜ ì¢…ë£Œë¥¼ ê¸°ë‹¤ë ¤ì¤Œ(ì—†ìœ¼ë©´ ì¢…ë£Œ ì•ˆë¨)
 		
-		/* ExecutorService Á¾·áµÇ¾ú´ÂÁö È®ÀÎ */
+		/* ExecutorService ì¢…ë£Œë˜ì—ˆëŠ”ì§€ í™•ì¸ */
 		while(!executorService.isTerminated()) {
 		}
 		
 		SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
 		Calendar time1 = Calendar.getInstance();
 		String format_time1 = format1.format(time1.getTime());
-		System.out.println("["+format_time1+"]"+"¸ğµç Thread°¡ Á¾·áµÇ¾ù½À´Ï´Ù.");
+		System.out.println("["+format_time1+"]"+"ëª¨ë“  Threadê°€ ì¢…ë£Œë˜ì—‡ìŠµë‹ˆë‹¤.");
 	}
 }
 
@@ -42,14 +42,14 @@ public class MainClass {
 			executorService.execute(dothread);
 		}
 		
-		// ExecutorServiceÀÇ ¸ğµç ÀÛ¾÷ ÀÌÈÄ ´Ù¸¥ thread È£ÃâÀ» 10ÃÊ µ¿¾È Â÷´Ü
+		// ExecutorServiceì˜ ëª¨ë“  ì‘ì—… ì´í›„ ë‹¤ë¥¸ thread í˜¸ì¶œì„ 10ì´ˆ ë™ì•ˆ ì°¨ë‹¨
 		try {
 			
 			if(!executorService.awaitTermination(2, TimeUnit.SECONDS)) {
-				System.out.println("Ã³¸®ÁßÀÎ ÀÛ¾÷ Á¸Àç");
+				System.out.println("ì²˜ë¦¬ì¤‘ì¸ ì‘ì—… ì¡´ì¬");
 				executorService.shutdownNow();
 				if(!executorService.awaitTermination(2, TimeUnit.SECONDS)) {
-					System.out.println("¿©ÀüÈ÷ Á¾·áÇÏÁö ¾ÊÀº ÀÛ¾÷ Á¸Àç");
+					System.out.println("ì—¬ì „íˆ ì¢…ë£Œí•˜ì§€ ì•Šì€ ì‘ì—… ì¡´ì¬");
 				}
 			}
 		} catch (InterruptedException e) {
@@ -59,14 +59,14 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
-		// ExecutorService Á¾·á
-//		executorService.shutdown(); // ExecutorÀÇ ÀÛ¾÷À» ±â´Ù¸®°í Á¾·á½ÃÅ²´Ù. ´Ù¸¥ ÀÛ¾÷ÀÇ Á¾·á¸¦ ±â´Ù·ÁÁÜ(¾øÀ¸¸é Á¾·á ¾ÈµÊ)
+		// ExecutorService ì¢…ë£Œ
+//		executorService.shutdown(); // Executorì˜ ì‘ì—…ì„ ê¸°ë‹¤ë¦¬ê³  ì¢…ë£Œì‹œí‚¨ë‹¤. ë‹¤ë¥¸ ì‘ì—…ì˜ ì¢…ë£Œë¥¼ ê¸°ë‹¤ë ¤ì¤Œ(ì—†ìœ¼ë©´ ì¢…ë£Œ ì•ˆë¨)
 		
-		// ExecutorService Á¾·áµÇ¾ú´ÂÁö È®ÀÎ
+		// ExecutorService ì¢…ë£Œë˜ì—ˆëŠ”ì§€ í™•ì¸
 		while(!executorService.isTerminated()) {
 		}
 		
-		System.out.println("¸ğµç Thread°¡ Á¾·áµÇ¾ù½À´Ï´Ù.");
+		System.out.println("ëª¨ë“  Threadê°€ ì¢…ë£Œë˜ì—‡ìŠµë‹ˆë‹¤.");
 	}
 }
 */

@@ -1,4 +1,4 @@
-package timer;
+ï»¿package timer;
 import java.util.Timer;
 
 public class Timertest {
@@ -13,6 +13,6 @@ public class Timertest {
 			timer.cancel();
 		}
 		System.out.println("timer cancel");
-//		timer.cancel(); // ¾øÀ¸¸é Thread Á¾·áµÇÁö ¾ÊÀ½
+//		timer.cancel(); // ì—†ìœ¼ë©´ Thread ì¢…ë£Œ ì•ˆë¨
 	}
 }

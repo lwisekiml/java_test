@@ -18,7 +18,7 @@ public class ThreadPool implements Runnable{
 		Calendar time1 = Calendar.getInstance();
 		String format_time1 = format1.format(time1.getTime());
 		
-		System.out.println("["+format_time1+"]"+Thread.currentThread().getName()+"ÀÇ"+threadName+"ÀÌ ½ÃÀÛµÇ¾ú½À´Ï´Ù.");
+		System.out.println("["+format_time1+"]"+Thread.currentThread().getName()+"ì˜"+threadName+"ì´ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 		sleepThread();
 		
@@ -26,7 +26,7 @@ public class ThreadPool implements Runnable{
 		Calendar time2 = Calendar.getInstance();
 		String format_time2 = format2.format(time2.getTime());
 
-		System.out.println("["+format_time2+"]"+Thread.currentThread().getName()+"°¡ Á¾·áµÇ¾ú½À´Ï´Ù.");
+		System.out.println("["+format_time2+"]"+Thread.currentThread().getName()+"ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 	
 	private void sleepThread() {

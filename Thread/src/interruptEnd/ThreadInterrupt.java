@@ -9,10 +9,10 @@ public class ThreadInterrupt extends Thread {
 		try {
 			for(int i=0; i<10; i++) {
 				Thread.sleep(1000);
-				System.out.println(getName()+i+"¹øÂ° ¼öÇà");
+				System.out.println(getName()+i+"ë²ˆì§¸ ìˆ˜í–‰");
 			}
 		}catch (InterruptedException e) {
-			System.out.println("¾²·¹µå °­Á¦ Á¾·á");
+			System.out.println("ì“°ë ˆë“œ ê°•ì œ ì¢…ë£Œ");
 			return;
 		}
 	}

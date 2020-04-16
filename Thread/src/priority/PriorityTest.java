@@ -9,7 +9,7 @@ public class PriorityTest extends Thread {
 		try {
 			for(int i=0; i<10; i++) {
 				Thread.sleep(1000);
-				System.out.println(getName() + i + "¹øÂ° ¼öÇà");
+				System.out.println(getName() + i + "ë²ˆì§¸ ìˆ˜í–‰");
 			}
 		}catch (InterruptedException e) {
 			e.printStackTrace();

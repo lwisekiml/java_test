@@ -1,9 +1,9 @@
 package daemon;
 /*
-- µ¿ÀÏÇÑ ÇÁ·Î¼¼½º ¾È¿¡¼­ ´Ù¸¥ ½º·¹µåÀÇ ¼öÇàÀ» µ½´Â ½º·¹µå·Î ´Ù¸¥ ½º·¹µå¸¦ ¼­ºñ½º ÇØÁÖ¸é¼­ ´Ù¸¥ ½º·¹µå°¡ ¸ðµÎ Á¾·áµÇ¸é ÀÚ½Åµµ Á¾·áµÇ´Â ½º·¹µå
-- ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ´Â °ÍÀ» ¸·Áö ¾ÊÀ¸¸ç °¡ºñÁö ÄÃ·ºÅÍ³ª ¸ÞÀÎ ½º·¹µå°¡ µ¥¸ó ½º·¹µåÀÔ´Ï´Ù.
-- ½º·¹µå¸¦ »ý¼ºÇÏ°í setDaemon(true)¸¦ ¼³Á¤ÇÏ¸é µÊ
-- ½º·¹µå°¡ ½ÃÀÛÇÏ±â Àü¿¡ ¼³Á¤ÇØ¾ß ÇÕ´Ï´Ù. 
+- ë™ì¼í•œ í”„ë¡œì„¸ìŠ¤ ì•ˆì—ì„œ ë‹¤ë¥¸ ìŠ¤ë ˆë“œì˜ ìˆ˜í–‰ì„ ë•ëŠ” ìŠ¤ë ˆë“œë¡œ ë‹¤ë¥¸ ìŠ¤ë ˆë“œë¥¼ ì„œë¹„ìŠ¤ í•´ì£¼ë©´ì„œ ë‹¤ë¥¸ ìŠ¤ë ˆë“œê°€ ëª¨ë‘ ì¢…ë£Œë˜ë©´ ìžì‹ ë„ ì¢…ë£Œë˜ëŠ” ìŠ¤ë ˆë“œ
+- í”„ë¡œê·¸ëž¨ì´ ì¢…ë£Œë˜ëŠ” ê²ƒì„ ë§‰ì§€ ì•Šìœ¼ë©° ê°€ë¹„ì§€ ì»¬ë ‰í„°ë‚˜ ë©”ì¸ ìŠ¤ë ˆë“œê°€ ë°ëª¬ ìŠ¤ë ˆë“œìž…ë‹ˆë‹¤.
+- ìŠ¤ë ˆë“œë¥¼ ìƒì„±í•˜ê³  setDaemon(true)ë¥¼ ì„¤ì •í•˜ë©´ ë¨
+- ìŠ¤ë ˆë“œê°€ ì‹œìž‘í•˜ê¸° ì „ì— ì„¤ì •í•´ì•¼ í•©ë‹ˆë‹¤. 
 */
 public class Thread3 extends Thread {
 	int num=0;
@@ -19,7 +19,7 @@ public class Thread3 extends Thread {
 	public static void main(String[] args) {
 		Thread3 t = new Thread3();
 
-		t.setDaemon(true); // ÀÌ ºÎºÐÀÌ ¾øÀ¸¸é Á¾·áµÇÁö ¾Ê´Â´Ù.
+		t.setDaemon(true); // ì´ ë¶€ë¶„ì´ ì—†ìœ¼ë©´ ì¢…ë£Œë˜ì§€ ì•ŠëŠ”ë‹¤.
 		t.start();
 		System.out.println("Main Method End!");
 	}
@@ -32,8 +32,8 @@ public class Thread3 extends Thread {
 //
 //    public static void main(String[] args) {
 //        Thread t = new Thread(new Thread3());
-//        //t.setDaemon(true); // ÀÌ ºÎºÐÀÌ ¾øÀ¸¸é Á¾·áµÇÁö ¾Ê´Â´Ù.
-//        // µðÆúÆ®: µ¶¸³==> setDaemon(true): µ¥¸ó¾²·¹µå·Î (¸ÞÀÎ¾²·¹µå Á¾·á½Ã Á¾¼Ó¾²·¹µå´Â ÀÛ¾÷ ´Ù ¸ø³¡³»µµ ¸ÞÀÎ ¾²·¹µå¿Í ÇÔ²² Á¾·áµÈ´Ù.)
+//        //t.setDaemon(true); // ì´ ë¶€ë¶„ì´ ì—†ìœ¼ë©´ ì¢…ë£Œë˜ì§€ ì•ŠëŠ”ë‹¤.
+//        // ë””í´íŠ¸: ë…ë¦½==> setDaemon(true): ë°ëª¬ì“°ë ˆë“œë¡œ (ë©”ì¸ì“°ë ˆë“œ ì¢…ë£Œì‹œ ì¢…ì†ì“°ë ˆë“œëŠ” ìž‘ì—… ë‹¤ ëª»ëë‚´ë„ ë©”ì¸ ì“°ë ˆë“œì™€ í•¨ê»˜ ì¢…ë£Œëœë‹¤.)
 //        t.start();
 //         
 //        for(int i=1; i<=20; i++)
@@ -45,7 +45,7 @@ public class Thread3 extends Thread {
 //            if(i==5)
 //                autoSave = true;
 //        }
-//        System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+//        System.out.println("í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 //    }
 //
 //    @Override
@@ -61,6 +61,6 @@ public class Thread3 extends Thread {
 //    }
 //
 //    private void autoSave() {
-//        System.out.println("ÀÛ¾÷ÆÄÀÏÀÌ ÀÚµ¿ÀúÀåµÇ¾ú½À´Ï´Ù.");
+//        System.out.println("ìž‘ì—…íŒŒì¼ì´ ìžë™ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
 //    }
 //}

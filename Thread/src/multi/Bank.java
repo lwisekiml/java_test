@@ -8,12 +8,12 @@ public class Bank extends Thread{
 			synchronized (obj) {
 				int money = (int)(Math.random() * 3 + 1) * 100;
 				if(obj.balance >= money) {
-					System.out.println(getName() + " : ¿øº»ÀÇ balance:" + obj.balance);
-					System.out.println(getName() + " : Ã£´Â ±İ¾×:" + money);
+					System.out.println(getName() + " : ì›ë³¸ì˜ balance:" + obj.balance);
+					System.out.println(getName() + " : ì°¾ëŠ” ê¸ˆì•¡:" + money);
 					obj.withdraw(money);
-					System.out.println(getName() + " : ¼öÁ¤µÈ balance:" + obj.balance);
+					System.out.println(getName() + " : ìˆ˜ì •ëœ balance:" + obj.balance);
 				}else {
-					System.out.println("ÀÜ¾×ºÎÁ·");
+					System.out.println("ì”ì•¡ë¶€ì¡±");
 					break;
 				}
 			}
