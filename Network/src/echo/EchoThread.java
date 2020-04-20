@@ -6,38 +6,43 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.Socket;
 
-public class EchoClient {
+public class EchoThread implements Runnable {
+	Socket sock;
 
-	public static void main(String[] args) {
+	public EchoThread(Socket sock) {
+		this.sock=sock;
+	}
+
+	public void run() {
+		InetAddress inetaddr = sock.getInetAddress();
+		System.out.println(inetaddr.getHostAddress()+" 로 부터 접속했습니다.");
 		try {
-			Socket sock = new Socket("127.0.0.1", 10001);
-			BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-			
 			OutputStream out = sock.getOutputStream();
 			InputStream in = sock.getInputStream();
-			
+
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(out));
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			
+
 			String line = null;
-			
-			while((line = keyboard.readLine()) != null) {
-				if(line.equals("quit")) break;
-				
+
+			while((line = br.readLine()) != null) {
+				System.out.println("client로 부터 전송받은 문자열 :"+line);
 				pw.println(line);
 				pw.flush();
-				
-				String echo = br.readLine();
-				System.out.println("Server로 부터 받은 문자열 :"+echo);
 			}
-			
+
 			pw.close();
 			br.close();
 			sock.close();
+			EchoServer.maxThreadCnt--;
+			System.out.println("현재 접속 인원 :" + EchoServer.maxThreadCnt);
+			System.out.println("종료");
+
 		}catch (Exception e) {
-			System.out.println(e);
+			// TODO: handle exception
 		}
 	}
 }

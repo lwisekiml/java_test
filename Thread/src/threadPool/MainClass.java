@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+// https://postitforhooney.tistory.com/entry/JavaThread-Java-Thread-Pool%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Thread%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0Thread-Runnable
 public class MainClass {
 
 	public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class MainClass {
 		/* ExecutorService 종료 */
 		executorService.shutdown(); // Executor의 작업을 기다리고 종료시킨다. 다른 작업의 종료를 기다려줌(없으면 종료 안됨)
 		
-		/* ExecutorService 종료되었는지 확인 */
+		/* ExecutorService 종료되었는지 확인 : 종료되엇으면 true 반환*/
 		while(!executorService.isTerminated()) {
 		}
 		
