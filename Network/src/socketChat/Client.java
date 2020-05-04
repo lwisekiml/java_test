@@ -1,30 +1,49 @@
 package socketChat;
 
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
 public class Client {
-	private static final String SERVER_IP = "127.0.1.1";
+	private static final String SERVER_IP = "192.168.0.143";
 	private static final int SERVER_PROT = 5000;
 
 	public static void main(String[] args) {
-		Socket socket = null;
+		String name = null;
+		Scanner scanner = new Scanner(System.in);
 		
-		try {
-			socket = new Socket();
+		while(true) {
+			System.out.println("대화명을 입력하세요.");
+			System.out.println(">>> ");
+			name = scanner.nextLine();
 			
+			if(name.isEmpty() == false) {
+				break;
+			}
+			
+			System.out.println("대화명은 한글자 이상 입력해야 합니다.\n");
+		}
+		
+		scanner.close();
+		
+		Socket socket = new Socket();
+		try {
 			socket.connect(new InetSocketAddress(SERVER_IP, SERVER_PROT));
+			consoleLog("채팅방에 입장하였습니다");
+			new ChatWindow(name, socket).show();
+			
+			PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8), true);
+			String request = "join:" + name + "\r\n";
+			pw.println(request);
 		}catch (IOException e) {
 			e.printStackTrace();
-		}finally {
-			try {
-				if(socket != null && !socket.isClosed()) {
-					socket.close();
-				}
-			}catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
+	}
+	private static void consoleLog(String log) {
+		System.out.println(log);
 	}
 }
