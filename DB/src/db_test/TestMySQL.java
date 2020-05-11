@@ -1,8 +1,31 @@
 package db_test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-
+public class TestMySQL {
+	public static void main(String[] args) {
+		OpenTable ot = new OpenTable();
+		
+		ot.update("INSERT INTO members (mbNo, mbName, mbAddr)"
+					+ "VALUES (10, '김보경', '광주시 북구')");
+		
+		ot.select("SELECT * FROM members");
+		
+		try {
+			ot.rs.beforeFirst(); // 커서를 개체의 첫 번째 행 앞으로 이동 (http://egloos.zum.com/kaludin/v/2934008)
+			
+			while(ot.rs.next()) {
+				System.out.println(ot.rs.getString("mbNo")+
+									ot.rs.getString("mbName")+
+									ot.rs.getString("mbAddr"));
+			}
+		}catch (Exception e) {
+			System.out.println("getString error:"+e);
+		}
+		
+		ot.close();
+	}
+}
+		
+/*
 public class TestMySQL {
 	public static void main(String[] args) {
 		// Connection 레퍼런스 타입은 java.sql.Connection 클래스
@@ -38,3 +61,4 @@ public class TestMySQL {
 		}
 	}
 }
+*/
