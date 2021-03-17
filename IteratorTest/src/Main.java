@@ -13,11 +13,19 @@ public class Main {
 //		System.out.println(li.next());
 //		System.out.println(li.next());
 //		System.out.println(li.next());
-//		System.out.println(li.next());
-//		System.out.println(li.next());
-//		System.out.println(li.next());
+//		System.out.println(li.previous());
+//		System.out.println(li.previous());
+//		System.out.println(li.previous());
+//		System.out.println(li.previous());
+//		System.out.println(li.previous());
+//		System.out.println(li.previous());
+
 		while(li.hasNext()) {
 			System.out.println(li.next());
+		}
+
+		while(li.hasPrevious()) {
+			System.out.println(li.previous());
 		}
 	}
 }
