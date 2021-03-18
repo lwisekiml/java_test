@@ -8,7 +8,9 @@ public class Main {
 		numbers.addLast(40);
 		numbers.add(1, 15);
 		numbers.addFirst(5); // 5 10 15 20 30 40
-		numbers.remove(1);
+		numbers.remove(1); // 5 15 20 30 40
+		numbers.removeFirst(); // 15 20 30 40
+		numbers.removeLast(); // 
 		System.out.println(numbers);
 
 		ArrayList.ListIterator li = numbers.listIterator();

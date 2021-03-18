@@ -8,4 +8,6 @@
 2021-03-18 pm 02:29	AArrayList - java 구현 4 - toString
 			ArrayList - java 구현 5 - remove
 
+2021-03-18 PM 02:36	ArrayList - java 구현 6 - removeFirst, removeLast
+
 

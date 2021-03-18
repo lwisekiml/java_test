@@ -42,6 +42,14 @@ public class ArrayList {
 		return removed;
 	}
 	
+	public Object removeFirst() {
+		return remove(0);
+	}
+	
+	public Object removeLast() {
+		return remove(size-1);
+	}
+
 	public int size() {
 		return size;
 	}
