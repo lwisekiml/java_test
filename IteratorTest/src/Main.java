@@ -7,18 +7,10 @@ public class Main {
 		numbers.addLast(20);
 		numbers.addLast(30);
 		numbers.addLast(40);
+		numbers.add(1, 15);
+		numbers.addFirst(5);
 		
 		ArrayList.ListIterator li = numbers.listIterator();
-//		System.out.println(li.next());
-//		System.out.println(li.next());
-//		System.out.println(li.next());
-//		System.out.println(li.next());
-//		System.out.println(li.previous());
-//		System.out.println(li.previous());
-//		System.out.println(li.previous());
-//		System.out.println(li.previous());
-//		System.out.println(li.previous());
-//		System.out.println(li.previous());
 
 		while(li.hasNext()) {
 			System.out.println(li.next());
