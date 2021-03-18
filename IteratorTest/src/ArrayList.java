@@ -49,6 +49,10 @@ public class ArrayList {
 	public Object removeLast() {
 		return remove(size-1);
 	}
+	
+	public Object get(int index) {
+		return elementData[index];
+	}
 
 	public int size() {
 		return size;
@@ -94,7 +98,7 @@ public class ArrayList {
 		}
 
 		public void remove() {
-			//			ArrayList.this.remove(nextIndex-1);
+			ArrayList.this.remove(nextIndex-1);
 			nextIndex--;
 		}
 	}

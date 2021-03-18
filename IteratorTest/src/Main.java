@@ -10,7 +10,10 @@ public class Main {
 		numbers.addFirst(5); // 5 10 15 20 30 40
 		numbers.remove(1); // 5 15 20 30 40
 		numbers.removeFirst(); // 15 20 30 40
-		numbers.removeLast(); // 
+		numbers.removeLast(); // 15 20 30
+		System.out.println(numbers.get(1)); // 20
+		System.out.println(numbers.size());
+		System.out.println(numbers.indexOf(20));
 		System.out.println(numbers);
 
 		ArrayList.ListIterator li = numbers.listIterator();
