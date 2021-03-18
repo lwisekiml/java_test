@@ -74,6 +74,14 @@ public class ArrayList {
 	class ListIterator{
 		private int nextIndex = 0;
 
+		public int getNextIndex() {
+			return nextIndex;
+		}
+
+		public void setNextIndex(int nextIndex) {
+			this.nextIndex = nextIndex;
+		}
+
 		public boolean hasNext() {
 			return nextIndex < size();
 		}
@@ -102,6 +110,4 @@ public class ArrayList {
 			nextIndex--;
 		}
 	}
-
-	
 }
